@@ -15213,3 +15213,1254 @@ Processing by PrototypesController#index as HTML
 Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.4ms | Allocations: 6083)
 
 
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:14:04 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (1.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 45.0ms | Allocations: 37056)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 57.3ms | Allocations: 45335)
+  Rendered layout layouts/application.html.erb (Duration: 121.1ms | Allocations: 79427)
+Completed 200 OK in 149ms (Views: 114.6ms | ActiveRecord: 10.0ms | Allocations: 88321)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MywicHVyIjoiYmxvYl9pZCJ9fQ==--e7a25770e5234ebc31068ab9d27d6e0c5d855752/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:14:04 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MywicHVyIjoiYmxvYl9pZCJ9fQ==--e7a25770e5234ebc31068ab9d27d6e0c5d855752", "filename"=>"東京夕焼け"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 2garxg7kk782eme3rhpj57ugsp9n (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZ2FyeGc3a2s3ODJlbWUzcmhwajU3dWdzcDluIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoxOTowNC4yNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f6450bc7472c923f77d7a8ef75bd3de1b9b47d49/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZ2FyeGc3a2s3ODJlbWUzcmhwajU3dWdzcDluIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoxOTowNC4yNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f6450bc7472c923f77d7a8ef75bd3de1b9b47d49/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 3726)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiIyZ2FyeGc3a2s3ODJlbWUzcmhwajU3dWdzcDluIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoxOTowNC4yNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--f6450bc7472c923f77d7a8ef75bd3de1b9b47d49/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:14:04 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"東京夕焼け"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-03-17 12:14:05 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2952)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4554)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-03-17 12:14:10 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hoge@hoge.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 151ms (ActiveRecord: 0.2ms | Allocations: 2530)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1946)
+Completed 200 OK in 147ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-03-17 12:14:14 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hoge@hoge.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 148ms (ActiveRecord: 0.2ms | Allocations: 3290)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:14:14 +0900
+Processing by PrototypesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.2ms | Allocations: 3280)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4882)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 6532)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 6846)
+
+
+Started GET "/prototypes/4" for 127.0.0.1 at 2025-03-17 12:14:15 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 4[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 6617)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 8251)
+Completed 200 OK in 17ms (Views: 7.0ms | ActiveRecord: 2.3ms | Allocations: 15015)
+
+
+Started GET "/prototypes/4/edit" for 127.0.0.1 at 2025-03-17 12:14:20 +0900
+Processing by PrototypesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/edit.html.erb within layouts/application
+  Rendered prototypes/_form.html.erb (Duration: 2.3ms | Allocations: 1062)
+  Rendered prototypes/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2988)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 5695)
+
+
+Started GET "/prototypes/new" for 127.0.0.1 at 2025-03-17 12:14:57 +0900
+Processing by PrototypesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/new.html.erb within layouts/application
+  Rendered prototypes/_form.html.erb (Duration: 0.4ms | Allocations: 465)
+  Rendered prototypes/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 670)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2341)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 4102)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:14:58 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.7ms | Allocations: 3268)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4806)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 6463)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.1ms | Allocations: 6729)
+
+
+Started GET "/prototypes/4" for 127.0.0.1 at 2025-03-17 12:14:58 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 4[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3865)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5504)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 6210)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:15:00 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.3ms | Allocations: 3267)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4820)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6459)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.1ms | Allocations: 6724)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2025-03-17 12:15:01 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 2.3ms | Allocations: 2433)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4409)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:21
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 6920)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 8404)
+
+
+Started GET "/prototypes/4" for 127.0.0.1 at 2025-03-17 12:15:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 4[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3859)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5494)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.0ms | Allocations: 6201)
+
+
+Started DELETE "/prototypes/4?_method=delete" for 127.0.0.1 at 2025-03-17 12:15:04 +0900
+Processing by PrototypesController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 3[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 4[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mPrototype Destroy (0.2ms)[0m  [1m[31mDELETE FROM `prototypes` WHERE `prototypes`.`id` = 4[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 7f509a3e-a9ee-4e68-a416-cf34a270839a) to Async(default) with arguments: #<GlobalID:0x00007f196a64a480 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/3>>
+[ActiveJob] ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 52ms (ActiveRecord: 26.9ms | Allocations: 13599)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:15:04 +0900
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a] Performing ActiveStorage::PurgeJob (Job ID: 7f509a3e-a9ee-4e68-a416-cf34a270839a) from Async(default) enqueued at 2025-03-17T03:15:04.792638029Z with arguments: #<GlobalID:0x00007f19685f0a68 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `active_storage_attachments` WHERE `active_storage_attachments`.`blob_id` = 3 LIMIT 1[0m
+Processing by PrototypesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mActiveStorage::VariantRecord Load (0.3ms)[0m  [1m[34mSELECT `active_storage_variant_records`.* FROM `active_storage_variant_records` WHERE `active_storage_variant_records`.`blob_id` = 3[0m
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+  [1m[36mPrototype Load (0.5ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mActiveStorage::Blob Destroy (0.5ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  Rendered collection of prototypes/_prototype.html.erb [1 times] (Duration: 1.7ms | Allocations: 2350)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 7508)
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 9863)
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a] [36m  Disk Storage (0.3ms) [0m[31mDeleted file from key: 2garxg7kk782eme3rhpj57ugsp9n[0m
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 4.3ms | Allocations: 10408)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/2garxg7kk782eme3rhpj57ugsp9n/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [7f509a3e-a9ee-4e68-a416-cf34a270839a] Performed ActiveStorage::PurgeJob (Job ID: 7f509a3e-a9ee-4e68-a416-cf34a270839a) from Async(default) in 19.94ms
+Started GET "/users/1" for 127.0.0.1 at 2025-03-17 12:15:06 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  Rendered collection of prototypes/_prototype.html.erb [1 times] (Duration: 0.9ms | Allocations: 818)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1611)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:21
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 4134)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 4790)
+
+
+Started GET "/prototypes/2" for 127.0.0.1 at 2025-03-17 12:15:12 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 3783)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3874)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms | Allocations: 4598)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    15:       <% end %>
+    16:       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+    17:       <div class="prototype__image">
+    18:         <%= image_tag @prototype.image %>
+    19:       </div>
+    20:       
+    21:       <div class="prototype__body">
+  
+app/views/prototypes/show.html.erb:18
+Started GET "/prototypes/2" for 127.0.0.1 at 2025-03-17 12:15:43 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3756)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3847)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms | Allocations: 4545)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    15:       <% end %>
+    16:       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+    17:       <div class="prototype__image">
+    18:         <%= image_tag @prototype.image %>
+    19:       </div>
+    20:       
+    21:       <div class="prototype__body">
+  
+app/views/prototypes/show.html.erb:18
+Started GET "/users/1" for 127.0.0.1 at 2025-03-17 12:15:44 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`user_id` = 1[0m
+  ↳ app/views/users/show.html.erb:31
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  Rendered collection of prototypes/_prototype.html.erb [1 times] (Duration: 1.0ms | Allocations: 818)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1611)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:21
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4152)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.0ms | Allocations: 4806)
+
+
+Started GET "/prototypes/new" for 127.0.0.1 at 2025-03-17 12:15:44 +0900
+Processing by PrototypesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/new.html.erb within layouts/application
+  Rendered prototypes/_form.html.erb (Duration: 0.4ms | Allocations: 464)
+  Rendered prototypes/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 527)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2174)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 3840)
+
+
+Started POST "/prototypes" for 127.0.0.1 at 2025-03-17 12:16:00 +0900
+Processing by PrototypesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "prototype"=>{"title"=>"東京夕焼け", "catch_copy"=>"夕焼け", "concept"=>"夕焼け", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f19680c3090 @tempfile=#<Tempfile:/tmp/RackMultipart20250317-1774-d9k96j.jpg>, @content_type="image/jpeg", @original_filename="東京夕焼け.jpg", @headers="Content-Disposition: form-data; name=\"prototype[image]\"; filename=\"東京夕焼け.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"保存する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mPrototype Create (0.2ms)[0m  [1m[32mINSERT INTO `prototypes` (`title`, `catch_copy`, `concept`, `user_id`, `created_at`, `updated_at`) VALUES ('東京夕焼け', '夕焼け', '夕焼け', 1, '2025-03-17 03:16:00.473043', '2025-03-17 03:16:00.473043')[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` INNER JOIN `active_storage_attachments` ON `active_storage_blobs`.`id` = `active_storage_attachments`.`blob_id` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `service_name`, `byte_size`, `checksum`, `created_at`) VALUES ('dcwfdavabzyvt9wmf2r91jcpi4dc', '東京夕焼け.jpg', 'image/jpeg', '{\"identified\":true}', 'local', 48301, 'MzfTTmamPS+i3o2Gw18pWA==', '2025-03-17 03:16:00.481842')[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('image', 'Prototype', 5, 4, '2025-03-17 03:16:00.482885')[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mPrototype Update (0.2ms)[0m  [1m[33mUPDATE `prototypes` SET `prototypes`.`updated_at` = '2025-03-17 03:16:00.483888' WHERE `prototypes`.`id` = 5[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/prototypes_controller.rb:16:in `create'
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: dcwfdavabzyvt9wmf2r91jcpi4dc (checksum: MzfTTmamPS+i3o2Gw18pWA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c6cf63fb-4a9f-4e0f-9232-84263ea59fb1) to Async(default) with arguments: #<GlobalID:0x00007f196a63bca0 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/4>>
+[ActiveJob] ↳ app/controllers/prototypes_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 29ms (ActiveRecord: 9.6ms | Allocations: 16104)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:16:00 +0900
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1] Performing ActiveStorage::AnalyzeJob (Job ID: c6cf63fb-4a9f-4e0f-9232-84263ea59fb1) from Async(default) enqueued at 2025-03-17T03:16:00.494922942Z with arguments: #<GlobalID:0x00007f196a5ab448 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: dcwfdavabzyvt9wmf2r91jcpi4dc[0m
+Processing by PrototypesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+  [1m[36mPrototype Load (2.9ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.2ms | Allocations: 3270)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 5132)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 6772)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 3.7ms | Allocations: 7039)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bfc0c5c5fc62aaf0d77427cbea14173ca4cf8a7e/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:16:00 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bfc0c5c5fc62aaf0d77427cbea14173ca4cf8a7e", "filename"=>"東京夕焼け"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: dcwfdavabzyvt9wmf2r91jcpi4dc (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoyMTowMC41MzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--9919eafb41f2d3be8a7c3d8fcea62760e7a7af60/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoyMTowMC41MzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--9919eafb41f2d3be8a7c3d8fcea62760e7a7af60/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1469)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzoyMTowMC41MzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--9919eafb41f2d3be8a7c3d8fcea62760e7a7af60/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:16:00 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"東京夕焼け"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 152)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"width\":1000,\"height\":667,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 4[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`blob_id` = 4[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mPrototype Update (0.2ms)[0m  [1m[33mUPDATE `prototypes` SET `prototypes`.`updated_at` = '2025-03-17 03:16:00.639850' WHERE `prototypes`.`id` = 5[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1]   [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c6cf63fb-4a9f-4e0f-9232-84263ea59fb1] Performed ActiveStorage::AnalyzeJob (Job ID: c6cf63fb-4a9f-4e0f-9232-84263ea59fb1) from Async(default) in 151.49ms
+Started GET "/prototypes/2" for 127.0.0.1 at 2025-03-17 12:16:00 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 3734)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3825)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms | Allocations: 4524)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+    15:       <% end %>
+    16:       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+    17:       <div class="prototype__image">
+    18:         <%= image_tag @prototype.image %>
+    19:       </div>
+    20:       
+    21:       <div class="prototype__body">
+  
+app/views/prototypes/show.html.erb:18
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:01 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3853)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5512)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.2ms | Allocations: 6218)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:01 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3847)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 5482)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.9ms | Allocations: 6187)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:01 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3868)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5503)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.1ms | Allocations: 6208)
+
+
+Started POST "/prototypes/5/comments" for 127.0.0.1 at 2025-03-17 12:16:04 +0900
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"content"=>"すご"}, "commit"=>"送信する", "prototype_id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:16:in `comment_params'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mComment Create (0.2ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `prototype_id`, `user_id`, `created_at`, `updated_at`) VALUES ('すご', 5, 1, '2025-03-17 03:16:04.377194', '2025-03-17 03:16:04.377194')[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/comments_controller.rb:4:in `create'
+Redirected to http://127.0.0.1:3000/prototypes/5
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms | Allocations: 7415)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:04 +0900
+Processing by PrototypesController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:59
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 4398)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 6033)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 6742)
+
+
+Started GET "/prototypes/5/edit" for 127.0.0.1 at 2025-03-17 12:16:16 +0900
+Processing by PrototypesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/edit.html.erb within layouts/application
+  Rendered prototypes/_form.html.erb (Duration: 0.6ms | Allocations: 493)
+  Rendered prototypes/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 557)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2192)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 4818)
+
+
+Started PATCH "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:18 +0900
+Processing by PrototypesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "prototype"=>{"title"=>"東京夕焼け", "catch_copy"=>"夕焼け", "concept"=>"夕焼け"}, "commit"=>"保存する", "id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/prototypes/5
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 2822)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:16:18 +0900
+Processing by PrototypesController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:59
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 4397)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 6032)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 6741)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:36:59 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 33.8ms | Allocations: 37056)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 43.0ms | Allocations: 45335)
+  Rendered layout layouts/application.html.erb (Duration: 76.5ms | Allocations: 78904)
+Completed 200 OK in 86ms (Views: 72.0ms | ActiveRecord: 6.1ms | Allocations: 87798)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bfc0c5c5fc62aaf0d77427cbea14173ca4cf8a7e/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:36:59 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bfc0c5c5fc62aaf0d77427cbea14173ca4cf8a7e", "filename"=>"東京夕焼け"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: dcwfdavabzyvt9wmf2r91jcpi4dc (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzo0MTo1OS40MjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--136c1e47938b693222c08cd0d3d0f935d9b3bb14/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzo0MTo1OS40MjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--136c1e47938b693222c08cd0d3d0f935d9b3bb14/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 3726)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJkY3dmZGF2YWJ6eXZ0OXdtZjJyOTFqY3BpNGRjIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiJTNGJTNGJTNGJTNGJTNGLmpwZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJyVFNiU5RCVCMSVFNCVCQSVBQyVFNSVBNCU5NSVFNyU4NCVCQyVFMyU4MSU5MS5qcGciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9qcGVnIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNS0wMy0xN1QwMzo0MTo1OS40MjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--136c1e47938b693222c08cd0d3d0f935d9b3bb14/%E6%9D%B1%E4%BA%AC%E5%A4%95%E7%84%BC%E3%81%91.jpg" for 127.0.0.1 at 2025-03-17 12:36:59 +0900
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"東京夕焼け"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:00 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 2880)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:00 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.8ms | Allocations: 3292)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4176)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 5834)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.9ms | Allocations: 6102)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:01 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1404)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:01 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.3ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4158)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5810)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 6076)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 1416)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.0ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 4155)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 5808)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 6073)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1407)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.3ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4155)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5807)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 6072)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1387)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:02 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.7ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4158)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5834)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.9ms | Allocations: 6100)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 1387)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.0ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 4164)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 5837)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 6103)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms | Allocations: 1384)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.1ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 4161)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5813)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 6078)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1396)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.3ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 4164)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 5816)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 6081)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1390)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.2ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4164)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5816)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 6081)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1387)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.5ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4164)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5817)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms | Allocations: 6082)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.5ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 1399)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:03 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.1ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.9ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4158)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5836)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 6102)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:04 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :contributor_confirmation rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 1384)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:04 +0900
+Processing by PrototypesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 4.0ms | Allocations: 3281)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4155)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5828)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 6093)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-03-17 12:37:04 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2943)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 4473)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-03-17 12:37:09 +0900
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hoge@hoge.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'hoge@hoge.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 149ms (ActiveRecord: 0.2ms | Allocations: 4206)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:09 +0900
+Processing by PrototypesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+  [1m[36mPrototype Load (0.2ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:3
+  Rendered collection of prototypes/_prototype.html.erb [2 times] (Duration: 3.9ms | Allocations: 3269)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4866)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6515)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.4ms | Allocations: 6827)
+
+
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:10 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:18
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/views/prototypes/show.html.erb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/prototypes/show.html.erb:59
+  Rendered prototypes/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 7240)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 8874)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 2.2ms | Allocations: 16489)
+
+
+Started GET "/prototypes/5/edit" for 127.0.0.1 at 2025-03-17 12:37:11 +0900
+Processing by PrototypesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.3ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/edit.html.erb within layouts/application
+  Rendered prototypes/_form.html.erb (Duration: 1.1ms | Allocations: 1062)
+  Rendered prototypes/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2989)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 5711)
+
+
+Started DELETE "/prototypes/5?_method=delete" for 127.0.0.1 at 2025-03-17 12:37:13 +0900
+Processing by PrototypesController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:58:in `contributor_confirmation'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 5 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Attachment Destroy (0.2ms)[0m  [1m[31mDELETE FROM `active_storage_attachments` WHERE `active_storage_attachments`.`id` = 4[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`prototype_id` = 5[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mComment Destroy (0.1ms)[0m  [1m[31mDELETE FROM `comments` WHERE `comments`.`id` = 2[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mPrototype Destroy (0.2ms)[0m  [1m[31mDELETE FROM `prototypes` WHERE `prototypes`.`id` = 5[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mTRANSACTION (26.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 38648648-1339-47af-b9b9-a0edc4111edf) to Async(default) with arguments: #<GlobalID:0x00007f00f4935a20 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/4>>
+[ActiveJob] ↳ app/controllers/prototypes_controller.rb:40:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 46ms (ActiveRecord: 27.9ms | Allocations: 14347)
+
+
+Started GET "/" for 127.0.0.1 at 2025-03-17 12:37:13 +0900
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf] Performing ActiveStorage::PurgeJob (Job ID: 38648648-1339-47af-b9b9-a0edc4111edf) from Async(default) enqueued at 2025-03-17T03:37:13.958242485Z with arguments: #<GlobalID:0x00007f00f4bda2f8 @uri=#<URI::GID gid://protospace42113/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM `active_storage_attachments` WHERE `active_storage_attachments`.`blob_id` = 4 LIMIT 1[0m
+Processing by PrototypesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering prototypes/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mActiveStorage::VariantRecord Load (0.2ms)[0m  [1m[34mSELECT `active_storage_variant_records`.* FROM `active_storage_variant_records` WHERE `active_storage_variant_records`.`blob_id` = 4[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/prototypes/index.html.erb:3
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 4 AND `active_storage_attachments`.`record_type` = 'ActiveStorage::Blob' AND `active_storage_attachments`.`name` = 'preview_image' LIMIT 1[0m
+  [1m[36mPrototype Load (0.7ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes`[0m
+  ↳ app/views/prototypes/index.html.erb:17
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mActiveStorage::Blob Destroy (0.4ms)[0m  [1m[31mDELETE FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  ↳ app/views/prototypes/index.html.erb:17
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Prototype' AND `active_storage_attachments`.`name` = 'image' LIMIT 1[0m
+  ↳ app/views/prototypes/_prototype.html.erb:2
+  Rendered collection of prototypes/_prototype.html.erb [1 times] (Duration: 2.0ms | Allocations: 2354)
+  Rendered prototypes/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 7477)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 9140)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 2.5ms | Allocations: 9670)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf]   [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf] [36m  Disk Storage (0.1ms) [0m[31mDeleted file from key: dcwfdavabzyvt9wmf2r91jcpi4dc[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf] [36m  Disk Storage (0.0ms) [0m[31mDeleted files by key prefix: variants/dcwfdavabzyvt9wmf2r91jcpi4dc/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [38648648-1339-47af-b9b9-a0edc4111edf] Performed ActiveStorage::PurgeJob (Job ID: 38648648-1339-47af-b9b9-a0edc4111edf) from Async(default) in 21.65ms
+Started GET "/prototypes/5" for 127.0.0.1 at 2025-03-17 12:37:14 +0900
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPrototype Load (0.4ms)[0m  [1m[34mSELECT `prototypes`.* FROM `prototypes` WHERE `prototypes`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/prototypes_controller.rb:54:in `set_prototype'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms | Allocations: 936)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Prototype with 'id'=5):
+  
+app/controllers/prototypes_controller.rb:54:in `set_prototype'
